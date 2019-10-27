@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript" src="jsp/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('.btn').click(function() {
+			$('div').append('<img src=033.png>')//계속 연속적으로 나오게 하는 것
+			
+		})
+		
+		$('.btn01').click(function() {
+			$('div').append('안녕하세요')
+		})
+	});
+
+</script>
+
+
+</head>
+<body>
+<input type="button" value="이미지 추가" class="btn">
+<input type="button" value="글자 추가" class="btn01">
+<div>
+</div>
+
+</body>
+</html>

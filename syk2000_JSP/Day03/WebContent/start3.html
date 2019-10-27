@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript" src="jsp/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+
+	$(function() {
+		$(".btn").click(function() {
+
+			id = $(".id").val()
+			console.log("id" + id)
+
+			if (id == "root") {
+				location.href = 'server2.jsp?id=' + id
+
+			} else {
+				$('div').text("저장된 id가 아닙니다. 다시입력해주세요")
+			}
+		})
+	});
+</script>
+</head>
+<body>
+<div style="color: 'red';">
+
+</div>
+
+	아이디
+	<input class="id" type="text" name="id"><br>
+	<input class="btn" type="button" name="btn" value="클릭">
+
+
+
+</body>
+</html>

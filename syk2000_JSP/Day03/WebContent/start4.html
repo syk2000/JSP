@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript" src="jsp/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+
+	$(function() {
+		$(".btn").click(function() {
+
+			id = $(".id").val()
+			console.log("id" + id)
+
+			if (id == "root") {
+				location.href = 'server2.jsp?id=' + id
+
+			} else {
+				$('div').text('5글자보다 크게 입력하세요~!!!')
+			}
+		})
+	});
+</script>
+</head>
+<body>
+<div style="color:'red';"></div>
+
+	아이디<br>
+	<input class="id" type="text" name="id"><br>
+	<input class="btn" type="button" name="btn" value="클릭">
+	<br>
+	비밀번호<br>
+	<input class="pwd" type="password" name="pwd"><br>
+	<br>
+	비밀번호재확인
+	<br>
+	<input class="pwd" type="password" name="pwd_check">
+	<br>
+	이름
+	<br>
+	<input class="name" type="text" name="name">
+	<br>
+	생년월일
+	<br>
+	<input class="year" type="text" name="year">
+	<select class="month" opt='1;>
+	<ul>1월</ul>
+	<ul>2월</ul>
+	<ul>3월</ul>
+	<ul>4월</ul>
+	<ul>5월</ul>
+	<ul>6월</ul>
+	<ul>7월</ul>
+	<ul>8월</ul>
+	<ul>9월</ul>
+	<ul>10월</ul>
+	<ul>11월</ul>
+	<ul>12월</ul>
+	</select>
+	<input class="day" type="text" name="day"> 
+
+
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<!-- css, jsp는 head안에 넣는다 -->
+<link rel="stylesheet" type="text/css" href="css/out.css" />
+<script type="text/javascript" src="jsp/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+	//jsp는 int, double,등등을 사용을 안해도 시행이 잘된다.
+
+	//1. body 부분부터 인식을 먼저 하라고 설정
+	$(function() {//무명함수 = 이름 없는 함수가 존재한다.
+		alert("환영합니다. 제이쿼리에 들어왔어요~!") //밑에서 부터 인식한다. 설정안하면 위에서 부터 인식을 한다.
+		//2. 입력한 값 가지고 와서
+		idValue = $('input').val()//input태크를 가지고 온것임 쌍따옴표 사용해도 상관 무
+		alert('입력한 id>>' + idValue)
+		//3. 입력한 값이 5보다 큰지 체크
+		if (idValue.length >=5) {
+			//서버로 입력한 정보를 넘김.
+			location.href = 'server.jsp?id='+ idValue
+		}else{
+			alert("5글자 보다 크게 입력하세요~!!!")
+		}
+
+	});
+</script>
+</head>
+
+<body>
+	환영합니다. 3일차 입니다.
+	<br>
+	아이디<input type="text" name="id" value="rooooot">
+	<br>
+	<!--  패스워드<input type="password"><br>-->
+	<input type="button" value="입력값 체크">
+</body>
+</html>

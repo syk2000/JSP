@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript" src="jsp/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+
+	$(function() {
+		$.ajax({
+			url: "server02.jsp" ,				//서버랑 통신할 주소를 적기
+			success:function(result){
+				alert("서버 통신 성공~!!!")
+				alert(result);
+				$('div').append(result);
+			}
+				
+		});
+		
+	});
+</script>
+</head>
+<body>
+<div>
+</div>
+
+</body>
+</html>
